@@ -11,7 +11,7 @@ Make sure you have the following libraries installed:
 
 # Use
 
-Download the file or this project. Navigate to the directory and run the file in the command line:
+Download the `viewreg.py` file or this project. Navigate to the directory and run the file in the command line:
 
 `python viewreg.py -o /path/to/output_file.pdf -i /path/to/input_file.nii -r /path/to/reference_file.nii`
 
