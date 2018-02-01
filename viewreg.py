@@ -5,8 +5,16 @@ from nilearn.plotting import plot_anat
 import matplotlib.pyplot as plt
 
 
-def registration_report(fn, in_file, target, nslices=8,
+def registration_report(fn, in_file, target=None, nslices=8,
                         title=None):
+    """Creates a .pdf file showing registration alignment.
+    
+    Shows registration alignment along the transverse, sagittal, and frontal
+    planes. in_file is the registed file. target is the reference file used
+    for alignment. If set to None, a default 2mm MNI template is used. 
+    nlsices sets the number of slices to view for each plane. title sets the
+    title for the figures.
+    """
 
     fig, ax = plt.subplots(3, 1, figsize=(20, 25))
     ax[0].set_title(title, fontsize=30)
