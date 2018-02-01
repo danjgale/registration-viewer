@@ -24,6 +24,7 @@ def registration_report(fn, in_file, target, nslices=8,
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser('View subject registration')
+    parser.add_argument('-o', help='Output file (must include .pdf extension)')
     parser.add_argument('-i', help='Input file (i.e. file aligned to target)')
     parser.add_argument('-r', help='Reference file used for alignment. If not '
                         'provided, a 2mm MNI template is used',
@@ -31,4 +32,4 @@ if __name__ == '__main__':
     parser.add_argument('-n', help='Number of slices to display', default=8)
     parser.add_argument('-t', help='Title', default=None)
     args = parser.parse_args()
-    registration_report(args.i, args.r, args.n, args.t)
+    registration_report(args.o, args.i, args.r, args.n, args.t)
